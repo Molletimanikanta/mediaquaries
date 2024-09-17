@@ -1,4 +1,5 @@
 $mobile:576px;
+
 *{
     margin: 0px;
     padding: 0px;
@@ -6,55 +7,67 @@ $mobile:576px;
 }
 .parent{
     height: 100%;
-
     &__header{
         height: 10vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         &__logo{
-
             &__img{
                 width: 10vw;
             }
         }
         &__menu{
             display: flex;
-            gap: 1rem;
+            gap:1rem;
             a{
                 text-decoration: none;
-                color: grey;
+                color: gray;
             }
             a:hover{
-                color: cadetblue;
+                color: orange;
             }
         }
     }
-    
-    &__main{
+    &__menu{
+        height: 80vh;
         display: flex;
-        &__mobile{
-            border: 1px solid grey;
+
+        &__img{
+            
             flex: 1;
             display: flex;
-            &__img{
+            justify-content: center;
+            align-items: center;
+            
+        &__laptop{
+
+            
+
+            }
+
+        }
+        &__text{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &__one{
+                font-size: 5vw;
+
+            }
+            [class^="parent__menu__text__"]{
+                font-size: 3vw;
 
             }
         }
-        &__details{
-            border: 1px solid grey;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
     }
-    &__footer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
+
 }
+
 @media(max-width:$mobile){
     .parent__header{
         justify-content: center;
@@ -63,19 +76,25 @@ $mobile:576px;
                 width: 25vw;
             }
         }
+
         &__menu{
             display: none;
         }
+       
     }
-    .parent__main{
+    .parent__menu{
         flex-direction: column;
         gap: 2rem;
-        &__mobile{
-            &__img{
-                width: 200px;
-                height: 200px;
-                border-radius: 100%;
+        &__text{
+            border: 1px solid red;
+            &__one{
+                font-size: 20px;
+            }
+            &__two,&__three,&__four{
+                display: none;
             }
         }
     }
 }
+
+
